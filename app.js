@@ -3,10 +3,10 @@ const path = require('path');
 
 var app = express();
 var handlebars = require('express-handlebars').create({defaultLayout:'main'});
-
+var port = process.env.PORT || 3000;
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 3000);
+//app.set('port', 3000);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -30,5 +30,5 @@ app.use(function(err, req, res, next){
   res.render('500');
 });
 
-module.exports = app;
+app.listen(3000);
 
