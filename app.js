@@ -6,7 +6,8 @@ var handlebars = require('express-handlebars').create({ defaultLayout: 'main', p
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 3000);
+//app.set('port', 3000);
+var port = process.env.PORT || 3000;
 
 //handlebars.registerPartials(__dirname + '/views/partials');
 app.use(express.static(path.join(__dirname, 'public')));
