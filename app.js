@@ -2,7 +2,7 @@ var express = require('express');
 const path = require('path');
 
 var app = express();
-var handlebars = require('express-handlebars').create({defaultLayout:'main'});
+var handlebars = require('express-handlebars').create({ defaultLayout: 'main', partialsDir: ['views/partials/'] });
 var port = app.listen(process.env.PORT || 3000);
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
