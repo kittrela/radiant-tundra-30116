@@ -2,12 +2,13 @@ var express = require('express');
 const path = require('path');
 
 var app = express();
-var handlebars = require('express-handlebars').create({ defaultLayout: 'main', partialsDir: ['views/partials/'] });
-var port = app.listen(process.env.PORT || 3000);
+var handlebars = require('express-handlebars').create({defaultLayout:'main',partialsDir: ['views/partials/']});
+
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-//app.set('port', 3000);
+var port = process.env.PORT || 3000;
 
+//handlebars.registerPartials(__dirname + '/views/partials');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/',function(req,res){
@@ -30,5 +31,6 @@ app.use(function(err, req, res, next){
   res.render('500');
 });
 
-app.listen(port);
 
+app.listen(port);
+ 
