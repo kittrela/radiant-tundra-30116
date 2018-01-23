@@ -15,6 +15,10 @@ app.get('/',function(req,res){
   res.render('home') //We can omit the .handlebars extension as we do below
 });
 
+app.get('/admin_login', function(req, res){
+  res.render('admin_login')
+});
+
 app.get('/other-page',function(req,res){
   res.render('other-page');
 });
@@ -33,4 +37,3 @@ app.use(function(err, req, res, next){
 
 
 app.listen(port);
- 
