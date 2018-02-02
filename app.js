@@ -38,10 +38,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-<<<<<<< HEAD
-app.get('/',function(req,res){
-  res.render('home'); //We can omit the .handlebars extension as we do below
-});
+// app.get('/',function(req,res){
+//   res.render('home'); //We can omit the .handlebars extension as we do below
+// });
 
 // Admin REST
 app.get('/admin_login', function(req, res){
@@ -58,7 +57,7 @@ app.get('/other-page',function(req,res){
   context = {title: 'Handlebars Test'}
   res.render('other-page', context);
 });
-=======
+
 // Routes
 app.use('/', index);
 app.use('/sign-in', signIn);
@@ -73,7 +72,6 @@ passport.deserializeUser(User.deserializeUser());
 
 // Database connection
 const { Client } = require('pg');
->>>>>>> 61ebf069824a083cdf650eb4e19353cfe8acec34
 
 const client = new Client({
   connectionString : "pg://nhwljdkwkfhnoy:7a2f32711c734a5d67cfc0a1e59acc91654193795d8655de7ae0cfb27b630390@ec2-174-129-22-84.compute-1.amazonaws.com:5432/dfh46ttrtrflgb",
