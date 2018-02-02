@@ -12,15 +12,23 @@ var port = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/',function(req,res){
-  res.render('home') //We can omit the .handlebars extension as we do below
+  res.render('home'); //We can omit the .handlebars extension as we do below
 });
 
+// Admin REST
 app.get('/admin_login', function(req, res){
-  res.render('admin_login')
+  res.render('admin_login');
 });
+
+app.get('/admin_main', function(req, res) {
+  res.render('admin_main');
+});
+
+// End Admin Rest
 
 app.get('/other-page',function(req,res){
-  res.render('other-page');
+  context = {title: 'Handlebars Test'}
+  res.render('other-page', context);
 });
 
 app.use(function(req,res){
