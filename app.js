@@ -51,6 +51,10 @@ app.get('/admin_main', function(req, res) {
   res.render('admin_main');
 });
 
+app.get('/admin_management',function(req,res){
+  res.render('admin_management');
+});
+
 // End Admin Rest
 
 app.get('/other-page',function(req,res){
