@@ -1,32 +1,50 @@
 <div class="jumbotron">
-	<div class="container">
-		<h2>Administrator Management</h2>
-	</div>
+  <div class="container">
+    <h2>Administrator Management</h2>
+  </div>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-2">
-      <h3>Find Users</h3>
-      <p> Add, Remove or Edit Administrator accounts.</p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Go</a>
-    </div>
+<div class="row">
+  <div class="col-md-3">
+    <p>f</p>
+  </div>
 
+  <div class="col-md-9">
     <form>
       <div class="form-row">
-        <div class="form-group col-sm-4">
-            <label for="firstName" class="col-form-label">First Name</label>
-            <input type="text" class="form-control" id="firstName" placeholder="First Name">
-          <div class="form-group col-sm-4">
-            <label for="lastName" class="col-form-label">Last Name</label>
-            <input type="text" class="form-control" id="lastName" placeholder="Last Name">
-          </div>
+        <div class="form-group col-md-6">
+          <label for="firstName" class="col-form-label">First Name</label>
+          <input type="text" class="form-control" id="firstName" placeholder="First Name">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="lastName" class="col-form-label">Last Name</label>
+          <input type="text" class="form-control" id="lastName" placeholder="Last Name">
         </div>
       </div>
       <div class="form-row">
-        <div class="form-group">
-          
+        <div class="form-group col-md-6">
+          <label for="email" class="col-form-label">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Email">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="password" class="col-form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Password">
+          <input class="form-check-input" name="showPassword" type="checkbox" id=showPassword>
+          <label class="form-check-label" for="showPassword">Show Password</label>
+        </div>
 
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label>Administrator?</label>
+          <div class="form-check">
+            <input class="form-check-input" name="isAdmin" type="radio" value="yes" id="isAdminYes">
+            <label class="form-check-label" for="defaultCheck1">Yes</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" name="isAdmin" type="radio" value="no" id="isAdminNo">
+            <label class="form-check-label" for="defaultCheck1">No</label>
+          </div>
         </div>
       </div>
     </form>
